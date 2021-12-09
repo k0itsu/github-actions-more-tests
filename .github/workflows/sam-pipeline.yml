@@ -18,7 +18,7 @@ jobs:
       - run: sam build --use-container
 
       # Run Unit tests- Specify unit tests here 
-      - run: echo "TESTS!"
+      - run: python3 -m unittest discover
 
       # sam deploy
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name sam-hello-world --s3-bucket resume.delin.io --capabilities CAPABILITY_IAM --region us-east-1
