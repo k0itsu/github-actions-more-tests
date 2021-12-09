@@ -17,7 +17,8 @@ jobs:
       # sam build 
       - run: sam build --use-container
 
-      # Run Unit tests- Specify unit tests here 
+      # Run Unit tests- Specify unit tests here
+      - run: pip install -r tests/requirements.txt
       - run: python3 -m unittest discover
 
       # sam deploy
